@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to name's best wishes</title>
+<script>
+</script>
+<style>
+    html { color-scheme: light dark; }
+    body { 
+        
+        width: 35em; margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: scroll;
+        min-height: 100vh; /* vh 视图百分比*/
+    }
+    .container{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .card{
+        position: absolute;
+        width: 240px;
+        height: 360px;
+        background-color: #ececf0;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(0,0,0,0);
+        font-size: 8em;
+        font-weight: 700;
+        border: 10px solid rgba(0,0,0,.1);
+        transition: 0.5s;   /*跳转时间*/
+        transform-origin: 50% 100%;
+        /* filter: hue-rotate(calc(var(--i)*60deg)); /*调整色相 */
+        box-shadow: 0 15px 50px rgba(0,0,0,.1); /*阴影*/
+        Overflow:hidden;
+        background-size:cover;
+        /* background-image: url( toString(parseInt(var(--i))+5) + '1.png'); */
+    }
+    .container .special-card{
+        background-image: url('5.jpg');
+    }
+    .container:hover .card{
+        transform: rotate(calc(var(--i)*5deg))
+                    translate(calc(var(--i)*120px),-50px); /*deg 度 就是让它变换位置*/
+        box-shadow: 0 15px 50px rgba(0,0,0,.25); /*阴影*/
+        color: rgba(0,0,0,.55);
+        cursor: pointer;
+    }
+    .container:active .card:not(:active){
+        /* background-color: #333; */
+        /* background-image: none; */
+        opacity: 0.2;
+    }
+    .container .special-card:active{
+        
+    }
+    .container:active .card:active{
+        translate: calc(var(--i)*20px) -50px;
+        z-index: 999;
+        color: rgba(0,0,0,0);
+        width: 480px;
+        height: 720px;
+        background-image: url('112.jpg');
+    }
+
+</style>
+</head>
+<body onload="change();">
+    <!-- <h1>Welcome to wzl</h1> -->
+    <div di="" class="container">
+        <div class="special-card card" style="--i:-4;background-image: url('1.jpg')">
+            <!-- <img src="1.png" alt="1"> -->
+        </div>
+        <div di="2" class="card" style="--i:-3;background-image: url('2.jpg');"></div>
+        <div di="3" class="card" style="--i:-2;background-image: url('3.jpg');"></div>
+        <div di="4" class="card" style="--i:-1;background-image: url('4.jpg');"></div>
+        <div di="5" class="card special-card" style="--i:0;;"></div>
+        <div di="6" class="card" style="--i:1;background-image: url('6.jpg');"></div>
+        <div di="7" class="card" style="--i:2;background-image: url('7.jpg');"></div>
+        <div di="8" class="card" style="--i:3;background-image: url('8.jpg');"></div>
+        <div di="9" class="card" style="--i:4;background-image: url('9.jpg');"></div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
